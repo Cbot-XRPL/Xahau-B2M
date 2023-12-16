@@ -19,8 +19,5 @@ Once you have set up your `config.json` file you are ready to B2M. To run this t
 npm start
 ```
 
-
-
-
-
-Disclaimer: USE AT YOUR OWN RISK IT IS POSSIBLE TO LOSE FUNDS DURING A B2M PROCESS. WE DO NOT ACCEPT LIABILITY FOR ANY LOST FUNDS. During the B2M process the program will log an xpop source. If burn xrp but fail to mint on xahau you can reference.
+## Disclaimer
+USE AT YOUR OWN RISK IT IS POSSIBLE TO LOSE FUNDS DURING A B2M PROCESS. WE DO NOT ACCEPT LIABILITY FOR ANY LOST FUNDS. During the B2M process the program will log an xpop source. If burn xrp but fail to mint on xahau you can reference.
