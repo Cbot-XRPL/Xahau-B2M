@@ -7,10 +7,11 @@ This tool is desgined to be used locally using you perfered code editor with nod
 ## Set up
 
 Start by downloading this repo. After download open with your perffered code editor.
-Once your in the file open a terminal. Download all dependencys by usting the command
+Once your in the file open a terminal. Download all dependencys by usting the command:
 ```
 npm install
 ```
+Go to the config.json file and add your account seed, amount of XRP to B2M, and indicate ture or false if your address is funded on xahau on not. If you already have XAH in you account on Xahau use true if you have not funded you account on Xahau use false. Its advised you not do large B2M when you first use this tool.
 
 
 
