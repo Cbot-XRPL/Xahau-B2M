@@ -7,9 +7,9 @@ This tool is desgined to be used locally using you perfered code editor with nod
 ## Set up
 
 Start by downloading this repo. After download open with your perffered code editor.
-
+Once your in the file open a terminal. Download all dependencys by usting the command
 ```
-test
+npm install
 ```
 
 
