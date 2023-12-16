@@ -6,8 +6,8 @@ This tool will utilize your current XRP address on the Xahau sidechain. You will
 
 ## Set up
 
-Start by downloading this repo. After download open with your preferred code editor.
-Once your in the file open a terminal in the root of this repo. Download all dependencies by usting the command:
+Start by downloading this repo. After downloading open this repo with your preferred code editor.
+Once your in the file open a terminal in the root of this repo. Download all dependencies by useing the command:
 ```
 npm install
 ```
@@ -27,4 +27,4 @@ npm start
 
 
 ## Disclaimer
-USE THIS TOOL AT YOUR OWN RISK. IT IS POSSIBLE TO LOSE FUNDS DURING A B2M PROCESS IF YOU STOP THIS TOOL BEFORE IT IMPORTS YOUR XRP TO XAHAU OR YOU HAVE AN UNEXPECTED ERROR. WE DO NOT ACCEPT ANY LIABILITY FOR LOST FUNDS. During the B2M process the program will console log an xpop source. If burn xrp but fail to mint on xahau vist the xpop source. The xpop file can be used to import your burned xrp if you stop this tool before it imports to Xahau or you encounter an unexpected error. If you do not receive an xpop source or lose it you may be able to use the B2M indexer link listed above to find your missing xpop.
+USE THIS TOOL AT YOUR OWN RISK. IT IS POSSIBLE TO LOSE FUNDS DURING A B2M PROCESS IF YOU STOP THIS TOOL BEFORE IT IMPORTS YOUR XRP TO XAHAU OR YOU HAVE AN UNEXPECTED ERROR. WE DO NOT ACCEPT ANY LIABILITY FOR LOST FUNDS. During the B2M process the program will console log an xpop source. If you burn xrp but fail to mint on xahau vist the xpop source. The xpop file can be used to import your burned xrp if you stop this tool before it imports to Xahau or you encounter an unexpected error. If you do not receive an xpop source or lose it you may be able to use the B2M indexer link listed above to find your missing xpop.
