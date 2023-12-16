@@ -20,9 +20,9 @@ npm start
 ```
 
 ## Links
--Learn about the [XRPL](https://xrpl.org/docs.html)
--Learn about [Xahau](https://docs.xahau.network/)
--Explore B2M [Indexer](https://xpop.zerp.network/)
+- Learn about the [XRPL](https://xrpl.org/docs.html)
+- Learn about [Xahau](https://docs.xahau.network/)
+- Explore B2M [Indexer](https://xpop.zerp.network/)
 
 
 ## Disclaimer
