@@ -19,10 +19,7 @@ Once you have set up your `config.json` file you are ready to B2M. To run this t
 npm start
 ```
 
-## Links
-Learn about the [XRPL](https://xrpl.org/docs.html)
-Learn about [Xahau](https://docs.xahau.network/)
-Explore B2M [Indexer]()
+
 
 
 ## Disclaimer
