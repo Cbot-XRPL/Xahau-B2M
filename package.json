@@ -1,0 +1,18 @@
+{
+  "name": "b2m",
+  "version": "1.0.0",
+  "description": "b2m on xahau",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Cbot Labs Inc",
+  "license": "ISC",
+  "dependencies": {
+    "@transia/xrpl": "^2.7.3-alpha.21",
+    "dotenv": "^16.3.1",
+    "websocket": "^1.0.34",
+    "xrpl": "^2.14.0"
+  }
+}
