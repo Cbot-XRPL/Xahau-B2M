@@ -1,6 +1,8 @@
 # Xahau-B2M
 
-A node.js tool to burn to mint XRP from mainnet to the Xahau sidechain. This tool is desgined to be used locally using you perfered code editor with node.js support.  
+A node.js tool to burn to mint XRP from mainnet to the Xahau sidechain. 
+
+This tool is desgined to be used locally using you perfered code editor with node.js support. You should be familer with XRPL code and the Xahau sidechain to use this tool. See links below to learn more about the XRPL, Xahau, B2M, and Xpop.
 
 
 
