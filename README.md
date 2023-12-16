@@ -2,7 +2,7 @@
 
 A node.js tool to burn to mint XRP from mainnet to the Xahau sidechain. 
 
-This tool will utilize your current XRP address to create an account on the Xahau sidechain. You will need an account seed to use this tool. This tool is desgined to be used locally using you perfered code editor with node.js support. You should be familer with XRPL code and the Xahau sidechain to use this tool. See links below to learn more about the XRPL, Xahau, B2M, and Xpop.
+This tool will utilize your current XRP address on the Xahau sidechain. You will need an account seed to use this tool. This tool is desgined to be used locally using you perfered code editor with node.js support. You should be familer with XRPL code and the Xahau sidechain to use this tool. See links below to learn more about the XRPL, Xahau, B2M, and Xpop.
 
 ## Set up
 
