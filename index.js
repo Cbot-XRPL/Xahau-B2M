@@ -8,11 +8,11 @@ const { seed } = require('./config.json');
 const wallet = xrpl.Wallet.fromSeed(seed)
 
 //Main func -------------------------------------------
-async function main(){
+async function main() {
 
-//start watcher and run burner and importer
-console.log('Starting B2M Tool')
-watcher(wallet.address)
+    //start watcher 
+    console.log('Starting B2M Tool')
+    watcher(wallet.address)
 
 }
 
