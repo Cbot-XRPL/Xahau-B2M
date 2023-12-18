@@ -17,21 +17,25 @@ const keypair = xrpl.deriveKeypair(seed)
     await client.connect();
 
 
-// Prepare transaction -------------------------------------------------------
-   const prepared = await client.autofill({
+    const txJson = {
       "TransactionType": "Import",
       "NetworkID": 21337,
       "SigningPubKey": keypair.publicKey,
       "Blob": blob,
-      "Account": wallet.address
-    })
-
-  isFunded ? console.log('Working with funded account') : prepared.Sequence = "0"
-  isFunded ? prepared.Fee = "110" : prepared.Fee = "0"
+      "Account": wallet.address,
+    }
+  
+  isFunded ? txJson.Fee = "110" : txJson.Fee = "0"
+  isFunded ? console.log('Working with funded account') : txJson.Sequence = 0
+  
+  //console.log(txJson)
+  
+  
+  const prepared = await client.autofill(txJson)
   
     const max_ledger = prepared.LastLedgerSequence
     //console.log("Prepared transaction instructions:", prepared)
-    console.log("Transaction cost:", xrpl.dropsToXrp(prepared.Fee), "XRP")
+    //console.log("Transaction cost:", xrpl.dropsToXrp(prepared.Fee), "XRP")
     //console.log("Transaction expires after ledger:", max_ledger)
 
 
