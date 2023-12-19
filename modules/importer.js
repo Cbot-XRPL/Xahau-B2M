@@ -1,7 +1,7 @@
 
 //Import modules -------------------------------------------
 const xrpl = require("@transia/xrpl")
-const { seed, isFunded } = require('../config.json');
+const { seed, isFunded, network } = require('../config.json');
 
 
 //set up seed -------------------------------------------
@@ -13,7 +13,14 @@ const keypair = xrpl.deriveKeypair(seed)
 async function importer(blob) {
 
   // Define the network client--------------------------------------------------------------------
-  const client = new xrpl.Client("wss://xahau.network/")
+  if(network == "main" ){
+    global.c = "wss://xahau.network/"
+  }
+  if(network == "test" ){
+    global.c = "wss://xahau-test.net"
+  }
+  
+  const client = new xrpl.Client(c)
   await client.connect();
   console.log('Starting import to Xahau')
 

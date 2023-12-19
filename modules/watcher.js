@@ -41,7 +41,7 @@ async function watcher(address) {
 
     });
 
-    client.connect(`wss://xpop.zerp.network/blob/${address}`, 'echo-protocol');
+    client.connect(`wss://xpop.xrpldata.com/blob/${address}`, 'echo-protocol');
 }
 
 module.exports = watcher;

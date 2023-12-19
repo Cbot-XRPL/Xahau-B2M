@@ -1,5 +1,5 @@
 const xrpl = require('xrpl')
-const { seed, burnAmount } = require('../config.json');
+const { seed, burnAmount, network } = require('../config.json');
 
 
 // Define wallet --------------------------------------------------------------------
@@ -12,7 +12,14 @@ let fee = xrpl.xrpToDrops(burnAmount)
 async function burn() {
 
   // Define the network client --------------------------------------------------------------------
-  const client = new xrpl.Client("wss://xrplcluster.com/")
+if(network == "main" ){
+  global.c = "wss://xrplcluster.com/"
+}
+if(network == "test" ){
+  global.c = "wss://s.altnet.rippletest.net:51233"
+}
+
+  const client = new xrpl.Client(c)
   await client.connect();
   console.log("Starting XRP burn tx")
 
