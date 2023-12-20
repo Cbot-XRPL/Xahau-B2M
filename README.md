@@ -11,7 +11,7 @@ Once your in the file open a terminal in the root of this repo. Download all dep
 ```
 npm install
 ```
-Go to the `config.json` then indicate if your using test or mainnet, add your account seed, add the amount of XRP to B2M, indicate true or false if your address is funded on xahau on not. If you already have XAH in you account on Xahau use true if you have not funded your account on Xahau use false. It is advised not to do large B2M when you first use this tool.
+Go to the `config.json` then indicate network by using test or main, add your account seed, add the amount of XRP to B2M, and indicate true or false if your address is funded on xahau on not. If you already have XAH in you account on Xahau use true if you have not funded your account on Xahau use false. It is advised not to do large B2M when you first use this tool.
 
 ## Run Program
 Once you have set up your `config.json` file you are ready to B2M. To run this tool use the command:
