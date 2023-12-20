@@ -24,6 +24,7 @@ npm start
 - Learn about Xahau: https://docs.xahau.network/
 - Explore B2M indexer: https://xpop.zerp.network/
 - Get a testnet account: https://xrpl.org/xrp-testnet-faucet.html
+- Genarate mainnet account locally: https://github.com/WietseWind/xrp-vanity-generator
 
 
 
