@@ -24,15 +24,17 @@ if(network == "test" ){
   console.log("Starting XRP burn tx")
 
   // XRP burn TX ----------------------------------
-  const tx = {
+  const txJson = {
     "TransactionType": "AccountSet",
     "Account": wallet.address,
     "Fee": fee,
     "OperationLimit": 21337,
   }
+  network == 'main' ? console.log('using mainnet account') : txJson.OperationLimit = 21338
+
 
   // Sign prepared instructions ------------------------------------------------
-  const cst_prepared = await client.autofill(tx)
+  const cst_prepared = await client.autofill(txJson)
   const cst_signed = wallet.sign(cst_prepared)
 
 
@@ -42,7 +44,7 @@ if(network == "test" ){
   // Check transaction results -------------------------------------------------
   console.log(`Transaction result: ${cst_result.result.meta.TransactionResult}`)
   if (cst_result.result.meta.TransactionResult == "tesSUCCESS") {
-    console.log(`Burn transaction succeeded: https://mainnet.xrpl.org/transactions/${cst_signed.hash}`)
+    console.log(`Burn transaction succeeded: https://${network}net.xrpl.org/transactions/${cst_signed.hash}`)
   } else {
     throw `Error sending transaction: ${cst_result}`
   }
