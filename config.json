@@ -1,7 +1,8 @@
 {
     
+    "network": "test",
+    "seed": "sEdTNVBU45SDpuhVrpYutJfdm7QQbjK",
     "burnAmount": "0.05",
-    "isFunded": true,
-    "seed": ""
-    
+    "isFunded": true
+
 }

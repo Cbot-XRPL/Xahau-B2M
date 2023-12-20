@@ -1,5 +1,5 @@
 const xrpl = require('xrpl')
-const { seed, burnAmount } = require('../config.json');
+const { seed, burnAmount, network } = require('../config.json');
 
 
 // Define wallet --------------------------------------------------------------------
@@ -12,20 +12,29 @@ let fee = xrpl.xrpToDrops(burnAmount)
 async function burn() {
 
   // Define the network client --------------------------------------------------------------------
-  const client = new xrpl.Client("wss://xrplcluster.com/")
+if(network == "main" ){
+  global.c = "wss://xrplcluster.com/"
+}
+if(network == "test" ){
+  global.c = "wss://s.altnet.rippletest.net:51233"
+}
+
+  const client = new xrpl.Client(c)
   await client.connect();
   console.log("Starting XRP burn tx")
 
   // XRP burn TX ----------------------------------
-  const tx = {
+  const txJson = {
     "TransactionType": "AccountSet",
     "Account": wallet.address,
     "Fee": fee,
     "OperationLimit": 21337,
   }
+  network == 'main' ? console.log('using mainnet account') : txJson.OperationLimit = 21338
+
 
   // Sign prepared instructions ------------------------------------------------
-  const cst_prepared = await client.autofill(tx)
+  const cst_prepared = await client.autofill(txJson)
   const cst_signed = wallet.sign(cst_prepared)
 
 
@@ -35,7 +44,7 @@ async function burn() {
   // Check transaction results -------------------------------------------------
   console.log(`Transaction result: ${cst_result.result.meta.TransactionResult}`)
   if (cst_result.result.meta.TransactionResult == "tesSUCCESS") {
-    console.log(`Burn transaction succeeded: https://mainnet.xrpl.org/transactions/${cst_signed.hash}`)
+    console.log(`Burn transaction succeeded: https://${network}net.xrpl.org/transactions/${cst_signed.hash}`)
   } else {
     throw `Error sending transaction: ${cst_result}`
   }

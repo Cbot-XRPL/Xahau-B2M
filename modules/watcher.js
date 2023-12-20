@@ -3,7 +3,7 @@
 const burn = require('./burn.js');
 const importer = require('./importer.js');
 var WebSocketClient = require('websocket').client;
-
+const {network } = require('../config.json');
 
 
 // Wrap code in an async function so we can use await -------------------------------------------
@@ -29,10 +29,12 @@ async function watcher(address) {
             if (message.type === 'utf8') {
                 console.log(`Collecting xpop`)
                 let data = JSON.parse(message.utf8Data)
+                //console.log(data)
                 console.log(`Xpop source: ${data.xpop.source}`)
                 let blob = data.xpop.blob.toUpperCase()
 
                 // Once websocket detects burn TX import to Xahau -------------------------------------------
+                //console.log(blob)
                 importer(blob)
 
             }
@@ -40,8 +42,15 @@ async function watcher(address) {
 
 
     });
-
-    client.connect(`wss://xpop.zerp.network/blob/${address}`, 'echo-protocol');
+     // Connect to proper xpop server depending on network ------------------------------------------
+    if(network == "main" ){
+        global.s = "wss://xpop"
+      }
+      if(network == "test" ){
+        global.s = "ws://testnet4xpop"
+      }
+      
+    client.connect(`${s}.zerp.network/blob/${address}`, 'echo-protocol');
 }
 
 module.exports = watcher;
