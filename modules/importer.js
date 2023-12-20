@@ -19,11 +19,9 @@ async function importer(blob) {
   if(network == "test" ){
     global.c = "wss://xahau-test.net"
   }
-  console.log(c)
+ 
   const client = new xrpl.Client(c)
-  await client.connect().then(()=>{
-    console.log('connected')
-  });
+  await client.connect()
   console.log('Starting import to Xahau')
 
 
