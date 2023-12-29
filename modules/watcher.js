@@ -44,13 +44,13 @@ async function watcher(address) {
     });
      // Connect to proper xpop server depending on network ------------------------------------------
     if(network == "main" ){
-        global.s = "wss://xpop"
+        global.s = "wss://xpop.xrpl-labs.com/blob/"
       }
       if(network == "test" ){
-        global.s = "ws://testnet4xpop"
+        global.s = "wss://xpop.xrpl-labs.com/testnet/blob/"
       }
-      
-    client.connect(`${s}.zerp.network/blob/${address}`, 'echo-protocol');
+    //this is websocket connection
+    client.connect(`${s}${address}`, 'echo-protocol');
 }
 
 module.exports = watcher;
